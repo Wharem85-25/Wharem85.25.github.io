@@ -5,28 +5,6 @@ import ResizeObserver from "react-resize-observer";
 
 const giphyFetch = new GiphyFetch("ntvHS8Vuzcbz5X5E4Ija4o2pFODP5BIh");
 
-function GridDemo({onGifClick}) {
-	const fetchGifs = (offset) =>
-	giphyFetch.search("cats", { offset, limit: 10 });
-	const [width, setWidth] = useState(window.innerWidth);
-	return(
-		<>
-			<Grid
-				onGifClick={onGifClick}
-				fetchGifs={fetchGifs}
-				width={width}
-				columns={3}
-				gutter={6}
-			/>
-			<ResizeObserver
-				onResize={({width}) => {
-					setWidth(width);
-				}}
-			/>
-		</>
-	);
-}
-
 function SearchGif({onGifClick}) {
 	const search = document.getElementById('search').value;
 	const fetchGifs = (offset) =>
@@ -50,4 +28,4 @@ function SearchGif({onGifClick}) {
 	);
 }
 
-export default GridDemo;
+export default SearchGif;
