@@ -27,25 +27,3 @@ const Search = () => {
 
 export default Search;
 
-// function SearchGif({onGifClick}) {
-// 	const search = document.getElementById('search').value;
-// 	const fetchGifs = (offset) =>
-// 	giphyFetch.search(search, { offset, limit: 10 });
-// 	const [width, setWidth] = useState(window.innerWidth);
-// 	return(
-// 		<>
-// 			<Grid
-// 				onGifClick={onGifClick}
-// 				fetchGifs={fetchGifs}
-// 				width={width}
-// 				columns={3}
-// 				gutter={6}
-// 			/>
-// 			<ResizeObserver
-// 				onResize={({width}) => {
-// 					setWidth(width);
-// 				}}
-// 			/>
-// 		</>
-// 	);
-// }
